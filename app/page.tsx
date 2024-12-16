@@ -113,22 +113,19 @@ export default function Home() {
           ))}
         </div>
         {dropdown && (
-          <div>
-            <div className="bg-white text-black grid grid-cols-3 h-96 overflow-y-scroll z-10 rounded-xl p-4">
-              {filteredCountries.map((country, index) => (
-                <div
-                  data-testid={`item-${index}`}
-                  onMouseDown={(e) => e.preventDefault()}
-                  onClick={() => toggleSelectedItem(country)}
-                  className="flex items-center gap-1"
-                  key={index}
-                >
-                  {selectItemCheck(country) && <CheckIcon />}
-                  {country}
-                </div>
-              ))}
-            </div>
-            <div>tuulaa</div>
+          <div className="bg-white text-black grid grid-cols-3 h-96 overflow-y-scroll z-10 rounded-xl p-4">
+            {filteredCountries.map((country, index) => (
+              <div
+                data-testid={`item-${index}`}
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => toggleSelectedItem(country)}
+                className="flex items-center gap-1"
+                key={index}
+              >
+                {selectItemCheck(country) && <CheckIcon />}
+                {country}
+              </div>
+            ))}
           </div>
         )}
       </div>
