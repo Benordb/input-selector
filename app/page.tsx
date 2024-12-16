@@ -44,7 +44,7 @@ export default function Home() {
     }
   };
   return (
-    <div className="m-auto px-4 py-8 max-w-[800px]">
+    <div style={{ maxWidth: "800px" }} className="m-auto px-4 py-8">
       <div>Benordb</div>
       <div className="flex flex-col justify-center items-center">
         <div className="flex justify-center gap-4 w-full">
